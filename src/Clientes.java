@@ -8,7 +8,8 @@ public class Clientes extends Thread{
     public int Temps=0;
     public String Nombre=null;
     public Cajas Caja=null;
-
+    public int posicion=0;
+    String[] cola = new String[10];
     /*
     comprando -> th.sleep(random.int)
     en cola ->th.espera(cola)
@@ -19,7 +20,7 @@ public class Clientes extends Thread{
     public Clientes(){
     }
 
-    public Clientes(int temps, String nombre, Cajas caja) {
+    public Clientes(int temps, String nombre, Cajas  caja) {
         Temps = temps;
         Nombre = nombre;
         Caja = caja;
@@ -53,12 +54,18 @@ public class Clientes extends Thread{
 
 
     public void run() {
-        System.out.println("Estoy trabajando");
-        Random rd = new Random();
-        System.out.println(rd.nextInt(10));
-        for(int j=posicion_ini; j<posicion_fin; j++){
-            oc1.AñadirCola(rd.nextInt(10),j,this.getName());
+
+        for (int i = 0; i < Temps; i++) {
+            System.out.println("Esta comprando el cliente " + Nombre+ ", le quedan "+(Temps-i)+" segundos");
         }
+
+
+
+        for(int j=0; j<=posicion; j++){
+            Caja.AñadirCola(j,Nombre,cola);
+        }
+
+        Caja.imprimirCola();
     }
 }
 
