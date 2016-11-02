@@ -1,0 +1,26 @@
+Pràctica 4 – Supermarket
+Objectius
+•Ús del conceptes join, wait i notify .
+•Aprendre a fer servir funcions relacionades amb la mesura de temps.
+•Atomicitat de funcions
+•Modelitzar el món amb classes de java
+
+
+Part 1
+
+Escriu una classe anomenada SuperMarket que implementi el funcionament de n caixes d'un
+supermercat. Els m clients del supermercat estaran un temps aleatori comprant i amb posterioritat
+seleccionaran de forma aleatòria en quina caixa posicionar-se per a situar-se en la seva cua
+corresponen. Quan s'assigni el torn seran atesos procedint al pagament e ingressat en la variable
+resultats del supermercat. S'han de crear tants threads com clients i els paràmetres n i m s'han de
+passar com arguments al programa. Feu que el pagament sigui proporcional al temps que el client
+ha passat en el supermercat comprat. Calcula el temps mitja per client.
+
+Part 2
+Escriu una classe anomenada ModernSuperMarket que implementi el funcionament de n caixes. Els
+mateixos m clients del supermercat realitzaran el mateix procés que en l'exercici anterior situant-se
+quan hagin realitzat la compra en una única cua. Quan qualsevol caixa estigui disponible, el primer
+de la cua serà atès en la caixa corresponen. Calcula el temps mitja per client i comparar-ho amb
+l'anterior.
+Quina d'aquestes alternatives és la més eficient?
+Quina triaries tu si tinguessis un supermercat?
